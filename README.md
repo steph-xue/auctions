@@ -2,9 +2,9 @@
 The commerce project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application
 
 ## Auctions App
-The user can login, logout, or register for a new user account for more functionality with the application as indicated below
+The user can login, logout, or register for a new user account for more functionality with the application as indicated below:  
 
-Functions where login authentication is not needed:
+**Functions where login authentication is not needed:**
 1. Viewing active auction listings:  
    - The user can view a list of all active auction listings (sorted alphabetically by title)
      - This can be accessed via the 'Active Listings' tab 
@@ -30,9 +30,9 @@ Functions where login authentication is not needed:
 2. Searching auction listings by category 
    - The user can search the list of active listings by category based on the listed categories avaliable
     - This can be accessed via the 'Categories' tab 
-    - Listings in each category are sorted alphabetically by title
+    - Listings in each category are sorted alphabetically by title  
 
-Functions where login authentication is needed:
+**Functions where login authentication is needed:**
 1. Creating new auction listings
    - Can be accessed via the 'Create Listing' tab 
     - Users can create a new auction listing by providing the following information:
