@@ -89,3 +89,31 @@ The user can login, logout, or register for a new user account for more function
 ## Homepage (Active Listings)
 ![Active Listings](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Active Listings")
 
+## Listing Page
+![Listing Page](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Listing Page")
+
+## View by Category
+![View by Category](/encyclopedia/static/encyclopedia/homepage.png?raw=true "View by Category")
+
+## Create a New Listing
+![Create a New Listing](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Create a New Listing")
+
+## Watchlist
+![Watchlist](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Watchlist")
+
+## List of Your Highest Bids
+![List of Your Highest Bids](/encyclopedia/static/encyclopedia/homepage.png?raw=true "List of Your Highest Bids")
+
+## Auctions Won
+![Auctions Won](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Auctions Won")
+
+## Your Listings
+![Your Listings](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Your Listings")
+
+## Login
+![Login](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Login")
+
+## Create an Account
+![Create an Account](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Create an Account")
+
+
