@@ -4,6 +4,8 @@ The commerce project allows the user to view and create new auction listings, as
 ## Auctions App
 The user can login, logout, or register for a new user account for more functionality with the application as indicated below:  
 
+&nbsp; 
+
 **Functions where login authentication is not needed:**
 1. Viewing active auction listings:  
    - The user can view a list of all active auction listings (sorted alphabetically by title)
@@ -30,7 +32,9 @@ The user can login, logout, or register for a new user account for more function
 2. Searching auction listings by category 
    - The user can search the list of active listings by category based on the listed categories avaliable
     - This can be accessed via the 'Categories' tab 
-    - Listings in each category are sorted alphabetically by title  
+    - Listings in each category are sorted alphabetically by title
+      
+&nbsp; 
 
 **Functions where login authentication is needed:**
 1. Creating new auction listings
@@ -70,3 +74,16 @@ The user can login, logout, or register for a new user account for more function
 6. Viewing auctions that you have won
    - The winner can see all auctions they have won in the 'Auction's Won' tab
     - It will display all listings they have won with their name listed as the winner
+
+&nbsp; 
+
+## Specifications and How to Run
+- The wiki project was created using Django, a Python-based web framework
+- The web application can be run in the terminal using 'python3 manage.py runserver'
+  
+&nbsp;  
+
+# Example Images
+## Homepage
+![Homepage](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Homepage")
+The homepage contains links to each of the wiki entries displayed in alphabetical order.
