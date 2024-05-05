@@ -1,0 +1,133 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    {% if message_green_alert %}
+        <div class="alert alert-success" role="alert">
+            {{ message_green_alert }}
+        </div>
+    {% endif %}
+
+    {% if message_red_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{ message_red_alert }}
+        </div>
+    {% endif %}
+
+    {% if request.user == listing.winner %}
+        <div class="alert alert-success" role="alert">
+            Congradulations! You have won the auction!
+        </div>
+    {% endif %}
+
+    <div class="text-center">
+        <h1 class="m-3">{{ listing.title }}</h1>
+        <img src="{{ listing.image_url }}" alt="{{ listing.title }}" height="300px" class="m-50">
+        <p><strong>Description:</strong> {{ listing.description }}</p>
+        <p><strong>Category:</strong> {{ listing.category }}</p>
+        <p><strong>Listing Owner: </strong>{{ listing.owner|capfirst }}</p>
+        <br>
+        <p><strong>Starting Price: </strong>${{ listing.initial_price|floatformat:2 }}</p>
+        <p>
+            {% if listing.winner %}
+                <div class="mb-1">Final Bidding Price: </div> 
+                <div>${{ listing.current_highest_bid.highest_bid|floatformat:2 }}</div>
+                <div><strong>Winner: {{ listing.winner|capfirst }}</strong></div>
+            {% else %}
+                <div class="mb-1"><strong>Current Highest Bidding Price: </strong></div>
+                {% if listing.current_highest_bid %}
+                    <div>${{ listing.current_highest_bid.highest_bid|floatformat:2 }}</div>
+                    <div class="smaller_text mt-1"><i>(made by {{ listing.current_highest_bid.user.username|capfirst }})</i></div>
+                {% else %}
+                    <div>No bids made yet</div>
+                {% endif %}
+            {% endif %}
+        </p>
+    </div>
+    <hr>
+
+
+    {% if user.is_authenticated and not listing.winner and request.user != listing.owner %}
+        <form action="{% url 'add_bid' id=listing.id %}" method="post" class="col-4 offset-4">
+            {% csrf_token %}
+            <div class="form-group text-center">
+                <label class="biggerfont" ><strong>Add a Bid: </strong></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input class="form-control" type="number" name="bid" placeholder="Enter a bid" min="0"/>
+                    <button type="submit" class="btn btn-brown mx-2">Add Bid</button>
+                </div>
+            </div>
+        </form>
+
+        <br>
+
+        {% if not in_watchlist %}
+            <form class="text-center" action="{% url 'add_watchlist' id=listing.id %}" action="post">
+                {% csrf_token %}
+                <input type="hidden" name="listing_id" value="{{ listing.id }}">
+                <button type="submit" class="btn btn-brown">Add to Watchlist</button>
+            </form>
+        {% else %}
+            <form class="text-center" action="{% url 'remove_watchlist' id=listing.id %}" action="post">
+                {% csrf_token %}
+                <input type="hidden" name="listing_id" value="{{ listing.id }}">
+                <button type="submit" class="btn btn-brown">Remove from Watchlist</button>
+            </form>
+        {% endif %}
+
+    {% endif %}
+    <br><br>
+
+    <div class="card mx-auto" style="width: 80rem;">
+        <div class="card-header">
+          <h5>Comments</h5>
+        </div>
+        {% if comments %}
+            <ul class="list-group list-group-flush">
+                {% for comment in comments %}
+                    <li class="list-group-item p-4 row">
+                        <p class="lessmargin">{{ comment.text }}</p>
+                        <p><small><i>Commented by: {{ comment.user.username|capfirst }} ({{ comment.date_time }})</i></small></p>
+                        {% if request.user == comment.user %}
+                            <form action="{% url 'delete_comment' id=listing.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="delete_comment" value="{{ comment.id }}">
+                                <button type="submit" class="btn btn-sm btn-brown lessmargin">Delete Comment</button>
+                            </form>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="pt-2 pl-3">No comments</p>
+        {% endif %}
+    </div>
+
+    <br>
+
+    {% if user.is_authenticated %}
+        <form class="text-center" action="{% url 'add_comment' id=listing.id %}" method="post">
+            {% csrf_token %}
+            <label><strong>Add Comment: </strong></label>
+            <input class="ml-2" style="width: 80rem;" type="text" name="comment">
+            <button type="submit" class="btn btn-brown ml-2">Add Comment</button>
+        </form>
+    {% endif %}
+
+    <br>
+    
+    {% if user.is_authenticated %}
+        {% if request.user == listing.owner and listing.is_active %}
+            <form class="text-center" action="{% url 'close_listing' id=listing.id %}" action="post">
+                {% csrf_token %}
+                <input type="hidden" name="listing_id" value="{{ listing.id }}">
+                <button type="submit" class="btn btn-danger">Close Listing</button>
+                <p class="mt-1"><i>(Listed item goes to the highest bidder)</i></p>
+            </form>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}

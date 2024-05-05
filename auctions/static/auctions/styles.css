@@ -1,0 +1,34 @@
+body {
+    padding: 10px;
+}
+
+.strongfont {
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(106, 59, 39)
+}
+
+.biggerfont {
+    font-size: 18px;
+}
+
+.smaller_text {
+    font-size: 12px;
+}
+
+.lessmargin {
+    margin-top: -15px;
+    margin-bottom: -3px;
+}
+
+#navid {
+    background-color: #ECE2DA;
+}
+
+.btn-brown {
+    background-color: #ECE2DA !important;
+}
+
+.btn-brown:hover {
+    background-color: #dec7b2!important;
+}

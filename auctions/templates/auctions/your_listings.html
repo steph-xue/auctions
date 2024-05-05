@@ -1,0 +1,75 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+
+        <h2 class="text-center">Your Listings</h2>
+
+        <form action="{% url 'your_listings' %}" method="post" class="col-4 offset-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Select: </label>
+                <select class="form-control" name="listing_type">
+                    <option selected disabled>Please choose an option</option>
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+              </div>
+            <div class="text-center">
+                <input class="btn btn-brown" type="submit" value="View Listings">
+            </div>
+        </form>
+
+        <br><br>
+
+        {% if listing_type == "active" %}
+            <h2 class="text-center">Active</h2>
+        {% elif listing_type == "inactive" %}
+            <h2 class="text-center">Inactive</h2>
+        {% else %}
+            <h2 class="text-center">All</h2>
+        {% endif %}
+
+        <br><br>
+
+        {% if listings %}
+            <div class="row text-center">
+                {% for listing in listings %}
+                <div class="card mx-auto" style="width: 20rem;">
+                    <img class="card-img-top" src="{{ listing.image_url }}" alt="{{ listing.title }}">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ listing.title }}</h4>
+                        <p class="card-text">{{ listing.description }}</p>
+                        <br>
+                        <h6 class="card-text">Starting Price: ${{ listing.initial_price|floatformat:2 }}</h6>
+                        <h6 class="card-text">
+                            {% if listing.winner %}
+                                <div class="mb-1">Final Bidding Price: </div> 
+                                <div>${{ listing.current_highest_bid.highest_bid|floatformat:2 }}</div>
+                                <div class="mt-3"><strong>Winner: {{ listing.winner|capfirst }}</strong></div>
+                            {% else %}
+                                <div class="mb-1">Current Highest Bidding Price: </div>
+                                {% if listing.current_highest_bid %}
+                                    <div>${{ listing.current_highest_bid.highest_bid|floatformat:2 }}</div>
+                                    <div class="smaller_text mt-1"><i>(made by {{ listing.current_highest_bid.user.username|capfirst }})</i></div>
+                                {% else %}
+                                    <div>No bids made yet</div>
+                                {% endif %}
+                            {% endif %}
+                        </h6>
+                        <br>
+                        <a href="{% url 'listing' id=listing.id %}" class="btn btn-brown">See details</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <br>
+            <p class="text-center">No Listings</p>
+        {% endif %}
+
+    {% endif %}
+    
+{% endblock %}

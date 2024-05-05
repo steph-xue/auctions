@@ -1,0 +1,31 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    {% if message_red_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{ message_red_alert }}
+        </div>
+    {% endif %}
+
+    <h2 class="text-center">View Listings By Category</h2>
+
+    <br>
+
+    <form action="{% url 'category_listing' %}" method="post" class="col-4 offset-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Category: </label>
+            <select class="form-control" name="category">
+                <option selected disabled>Please choose an option</option>
+                {% for category in categories %}
+                    <option value="{{category.category_name}}">{{category.category_name}}</option>
+                {% endfor %}
+            </select>
+          </div>
+        <div class="text-center">
+            <input class="btn btn-brown" type="submit" value="View Listings">
+        </div>
+    </form>
+    
+{% endblock %}
