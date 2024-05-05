@@ -1,4 +1,4 @@
-# Commerce Project
+# Auctions Project
 The commerce project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application
 
 ## Auctions App
@@ -78,12 +78,12 @@ The user can login, logout, or register for a new user account for more function
 &nbsp; 
 
 ## Specifications and How to Run
-- The wiki project was created using Django, a Python-based web framework
+- The auctions project was created using Django, a Python-based web framework
 - The web application can be run in the terminal using 'python3 manage.py runserver'
   
 &nbsp;  
 
 # Example Images
-## Homepage
-![Homepage](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Homepage")
-The homepage contains links to each of the wiki entries displayed in alphabetical order.
+## Homepage (Active Listings)
+![Active Listings](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Active Listings")
+
