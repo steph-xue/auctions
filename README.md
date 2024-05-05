@@ -1,6 +1,8 @@
 # Auctions Project
 The commerce project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application
 
+&nbsp; 
+
 ## Auctions App
 The user can login, logout, or register for a new user account for more functionality with the application as indicated below:  
 
