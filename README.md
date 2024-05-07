@@ -122,8 +122,8 @@ The user can see which listings they currently own and select to view from all, 
 ![Login](/auctions/static/auctions/images/login.png?raw=true "Login")
 Allows the user to login to their account.
 
-## Create an Account
-![Create an Account](/auctions/static/auctions/images/register?raw=true "Create an Account")
+## Register for a New Account
+![Register](/auctions/static/auctions/images/register.png?raw=true "Register")
 Allows the user to register for a new account.
 
 
