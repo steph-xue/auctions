@@ -1,5 +1,5 @@
 # Auctions Project
-The commerce project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application.
+The auctions project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application.
 
 &nbsp; 
 
