@@ -88,31 +88,31 @@ The user can login, logout, or register for a new user account for more function
 # Example Images
 ## Homepage (Active Listings)
 ![Active Listings](/auctions/static/auctions/images/active_listings.png?raw=true "Active Listings")
-The user can view a list of all active auction listings sorted alphabetically by title on the homepage.
+On the homepage, the user can view a list of all active auction listings sorted alphabetically by their titles.
 
 ## Listing Page
 ![Listing Page](/auctions/static/auctions/images/listing_page.png?raw=true "Listing Page")
-The user can view more details about the selected auction listing item, add a bid greater than the starting price and last highest bid price, and leave comments.
+The user can view more details about the selected auction listing item, add or delete items to their watchlist, add a bid greater than the starting price and last highest bid price, and leave or delete comments listed in reverse chronological order.
 
 ## View by Category
 ![View by Category](/auctions/static/auctions/images/view_category.png?raw=true "View by Category")
-The user can search the list of active listings by category based on the listed categories available.
+The user can search active auction listings by category based on the listed categories available.
 
 ## Create a New Listing
 ![Create a New Listing](/auctions/static/auctions/images/create_listing.png?raw=true "Create a New Listing")
-Users can create a new auction listing by providing the required information listed on the page.
+Users can create a new auction listing by providing all the necessary information needed.
 
 ## Watchlist
 ![Watchlist](/auctions/static/auctions/images/watchlist.png?raw=true "Watchlist")
-The watchlist can be used to help users keep track of listing items they are interested in. The user can add and remove listing items to their own watchlist.
+The user can add and remove auction listings to their own watchlist. The watchlist can be used to help users keep track of listing items they are interested in. 
 
 ## List of Your Highest Bids
 ![List of Your Highest Bids](/auctions/static/auctions/images/bidding_list.png?raw=true "List of Your Highest Bids")
-The user can see which listing items they currently hold the highest bid for.
+The user can see which auction listings they currently hold the highest bid for.
 
 ## Auctions Won
 ![Auctions Won](/auctions/static/auctions/images/auctions_won.png?raw=true "Auctions Won")
-The user can see which listing items they have won the auction for.
+The user can see which auction listings they have won an auction for (after the owner of the listing closes the bid and listing item page).
 
 ## Your Listings
 ![Your Listings](/auctions/static/auctions/images/your_listings.png?raw=true "Your Listings")
