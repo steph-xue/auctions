@@ -87,33 +87,33 @@ The user can login, logout, or register for a new user account for more function
 
 # Example Images
 ## Homepage (Active Listings)
-![Active Listings](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Active Listings")
+![Active Listings](/auctions/static/auctions/images/active_listings.png?raw=true "Active Listings")
 
 ## Listing Page
-![Listing Page](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Listing Page")
+![Listing Page](/auctions/static/auctions/images/listing_page.png?raw=true "Listing Page")
 
 ## View by Category
-![View by Category](/encyclopedia/static/encyclopedia/homepage.png?raw=true "View by Category")
+![View by Category](/auctions/static/auctions/images/view_category.png?raw=true "View by Category")
 
 ## Create a New Listing
-![Create a New Listing](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Create a New Listing")
+![Create a New Listing](/auctions/static/auctions/images/create_listing.png?raw=true "Create a New Listing")
 
 ## Watchlist
-![Watchlist](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Watchlist")
+![Watchlist](/auctions/static/auctions/images/watchlist.png?raw=true "Watchlist")
 
 ## List of Your Highest Bids
-![List of Your Highest Bids](/encyclopedia/static/encyclopedia/homepage.png?raw=true "List of Your Highest Bids")
+![List of Your Highest Bids](/auctions/static/auctions/images/bidding_list.png?raw=true "List of Your Highest Bids")
 
 ## Auctions Won
-![Auctions Won](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Auctions Won")
+![Auctions Won](/auctions/static/auctions/images/auctions_won.png?raw=true "Auctions Won")
 
 ## Your Listings
-![Your Listings](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Your Listings")
+![Your Listings](/auctions/static/auctions/images/your_listings.png?raw=true "Your Listings")
 
 ## Login
-![Login](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Login")
+![Login](/auctions/static/auctions/images/login.png?raw=true "Login")
 
 ## Create an Account
-![Create an Account](/encyclopedia/static/encyclopedia/homepage.png?raw=true "Create an Account")
+![Create an Account](/auctions/static/auctions/images/create_account?raw=true "Create an Account")
 
 
