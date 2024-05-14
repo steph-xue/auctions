@@ -35,7 +35,7 @@ The auctions project allows the user to view and create new auction listings, as
 <br></br>
 
 **2. Viewing more detailed information in the the auction listing page**
-   - The user can view more details about the selected auction listing item 
+   - The user can view more details about the selected auction listing item, add or delete items to their watchlist, add a bid greater than the starting price and last highest bid price, and leave or delete comments listed in reverse chronological order.
     - This can be accessed by clicking into viewing 'More Details' about a particular listing item
     - Information on the auction listing pages includes the following:
       - Title
@@ -49,7 +49,6 @@ The auctions project allows the user to view and create new auction listings, as
 &nbsp;
        
 ![Listing Page](/auctions/static/auctions/images/listing_page.png?raw=true "Listing Page")
-The user can view more details about the selected auction listing item, add or delete items to their watchlist, add a bid greater than the starting price and last highest bid price, and leave or delete comments listed in reverse chronological order.
 <br></br>
 
 **2. Searching auction listings by category**
@@ -73,7 +72,6 @@ The user can view more details about the selected auction listing item, add or d
       - The new auction listing will specify the user as the owner of the listing
 &nbsp;
 
-## Create a New Listing
 ![Create a New Listing](/auctions/static/auctions/images/create_listing.png?raw=true "Create a New Listing")
 <br></br>
 
@@ -87,7 +85,6 @@ The user can view more details about the selected auction listing item, add or d
 &nbsp;
 
 ![Watchlist](/auctions/static/auctions/images/watchlist.png?raw=true "Watchlist")
-The user can add and remove auction listings to their own watchlist. The watchlist can be used to help users keep track of listing items they are interested in. 
 <br></br>
 
 **3. Commenting on auction listings**
@@ -97,6 +94,8 @@ The user can add and remove auction listings to their own watchlist. The watchli
         - The user who commented
         - Date and time stamp
       - The log of comments is displayed on the auction item's listing page in reverse chronological order
+<br></br>
+
 **4. Bidding for auctions**
    - Users can bid for their desired auction listing items
    - The function to add a bid can be found on the auction's listing pages as an input and then clicking:
@@ -105,22 +104,23 @@ The user can add and remove auction listings to their own watchlist. The watchli
       - The user can view their current highest bids in the 'Bidding List' tab
         - Only the active listings where you currently hold the highest bids are listed
       - Bidded items are also automatically added to the watchlist
+      - The user can aksee which auction listings they currently hold the highest bid for
 &nbsp;
 
 ![List of Your Highest Bids](/auctions/static/auctions/images/bidding_list.png?raw=true "List of Your Highest Bids")
-The user can see which auction listings they currently hold the highest bid for
 <br></br>
 
 **5. Closing auctions and declaring a winner of the bid**
    - Owners of a listing item can close the auction by clicking the red 'Close Listing' button at the bottom of the item's listing page
    - Once the listing is closed, a winner is declared to be the highest bidder (if there is one)
+<br></br>
+
 **6. Viewing auctions that you have won**
-   - The winner can see all auctions they have won in the 'Auction's Won' tab
+   - The winner can see all auctions they have won in the 'Auction's Won' tab after the owner of the listing closes the bid and listing item page
    - It will display all listings they have won with their name listed as the winner
 &nbsp;
 
 ![Auctions Won](/auctions/static/auctions/images/auctions_won.png?raw=true "Auctions Won")
-The user can see which auction listings they have won an auction for (after the owner of the listing closes the bid and listing item page).
 <br></br> 
 
 **7. Viewing your own listings**
