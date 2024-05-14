@@ -8,6 +8,18 @@ The user can login, logout, or register for a new user account for more function
 
 &nbsp; 
 
+**Login**
+- Allows the user to login to their account
+&nbsp;
+
+![Login](/auctions/static/auctions/images/login.png?raw=true "Login")
+
+<br></br>
+
+**Register for a New Account**
+![Register](/auctions/static/auctions/images/register.png?raw=true "Register")
+Allows the user to register for a new account.
+
 **Functions where login authentication is not needed:**
 1. Viewing active auction listings:  
    - The user can view a list of all active auction listings (sorted alphabetically by title)
@@ -117,13 +129,5 @@ The user can see which auction listings they have won an auction for (after the 
 ## Your Listings
 ![Your Listings](/auctions/static/auctions/images/your_listings.png?raw=true "Your Listings")
 The user can see which listings they currently own and select to view from all, active, or inactive listings.
-
-## Login
-![Login](/auctions/static/auctions/images/login.png?raw=true "Login")
-Allows the user to login to their account.
-
-## Register for a New Account
-![Register](/auctions/static/auctions/images/register.png?raw=true "Register")
-Allows the user to register for a new account.
 
 
