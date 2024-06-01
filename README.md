@@ -19,7 +19,7 @@ The auctions project allows the user to view and create new auction listings, as
 <br></br>
 
 ## Features where login authentication is not needed:
-**1. Viewing active auction listings (homepage):**  
+**1. Viewing active auction listings (homepage)**  
    - The user can view a list of all active auction listings (sorted alphabetically by title)
      - This can be accessed via the 'Active Listings' tab 
      - Each auction listing card on the homepage displays the following:
