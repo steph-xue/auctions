@@ -130,7 +130,11 @@ The auctions project allows the user to view and create new auction listings, as
 ![Your Listings](/auctions/static/auctions/images/your_listings.png?raw=true "Your Listings")
 <br></br> 
 
-
-## Specifications and How to Run
+## Languages & Frameworks
 - The auctions project was created using Django, a Python-based web framework
-- The web application can be run in the terminal using 'python3 manage.py runserver'
+- JavaScript was utilized for the front end to create a mix of possible user interactions
+
+## How to Run
+- Install the latest version of python
+- Install Django by typing in the command line 'pip3 install Django'
+- The web application can be run on your local server by typing in the command line 'python3 manage.py runserver'
