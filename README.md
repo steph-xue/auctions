@@ -16,7 +16,7 @@ A full stack online auction web application where users can create and manage li
 
 ## Overview
 
-This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database. Each listing tracks its own current highest bid and owner, so bidding, closing an auction, and declaring a winner are all handled consistently as listings move from active to closed. Beyond the core buying and selling flow, the application also supports category browsing, a personal watchlist, and comment threads on every listing.
+This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database. Each listing tracks its own current highest bid and owner, so bidding, closing an auction, and declaring a winner are all handled consistently as listings move from active to closed. Beyond the core buying and selling flow, the application also supports category browsing, a personal watchlist, and comment threads on every listing, giving it a feature set closer to a full marketplace than a simple listings board.
 
 <br>
 
