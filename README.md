@@ -11,7 +11,7 @@ A full stack marketplace web application where users can create and manage aucti
 - [How It Works](#how-it-works)
 - [Getting Started](#getting-started)
 - [Future Improvements](#future-improvements)
-
+  
 <br>
 
 ## Overview
