@@ -101,7 +101,7 @@ Users can view all the listings they own from a dedicated tab, and filter betwee
 
 ## How It Works
 
-Listings, bids, comments, categories, and watchlist relationships are each represented as their own model in Django, connected so that a listing can reference its current highest bid, category, and owner directly. The core functionality of the application, including bidding, commenting, and updating a watchlist, is handled through standard forms that are submitted and processed entirely on the backend before the page reloads with the updated result. A shared Bootstrap layout keeps the navigation bar and overall structure consistent across every page, and interactive elements such as the navigation bar rely on Bootstrap's built in JavaScript components. All of this data is stored in a SQLite database, so a listing's status, current highest bid, and comments stay accurate as users interact with it.
+A shared Bootstrap layout keeps the navigation bar and overall structure consistent across every page, and interactive elements such as the navigation bar rely on Bootstrap's built in JavaScript components. On the backend, listings, bids, comments, categories, and watchlist relationships are each represented as their own model in Django, connected so that a listing can reference its current highest bid, category, and owner directly. The core functionality of the application, including bidding, commenting, and updating a watchlist, is handled through standard forms that are submitted and processed entirely on the backend before the page reloads with the updated result. All of this data is stored in a SQLite database, so a listing's status, current highest bid, and comments stay accurate as users interact with it.
 
 <br>
 
