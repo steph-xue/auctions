@@ -16,7 +16,7 @@ A full stack online auction web application where users can create and manage li
 
 ## Overview
 
-This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database.
+This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database. Each listing tracks its own current highest bid and owner, so bidding, closing an auction, and declaring a winner are all handled consistently as listings move from active to closed. Beyond the core buying and selling flow, the application also supports category browsing, a personal watchlist, and comment threads on every listing, giving it a feature set closer to a full marketplace than a simple listings board.
 
 <br>
 
@@ -101,7 +101,7 @@ Users can view all the listings they own from a dedicated tab, and filter betwee
 
 ## How It Works
 
-Every page extends a shared Bootstrap layout, keeping the navigation bar and overall structure consistent across the site. Interactive elements such as the navigation bar rely on Bootstrap's built in JavaScript components. The core functionality of the application, including bidding, commenting, and updating a watchlist, is handled by Django through standard forms that are submitted and processed entirely on the backend before the page reloads with the updated result. Listings, bids, comments, categories, and watchlist relationships are all stored as related records in a SQLite database through Django's models, with each listing referencing its current highest bid, category, and owner.
+Listings, bids, comments, categories, and watchlist relationships are each represented as their own model in Django, connected so that a listing can reference its current highest bid, category, and owner directly. The core functionality of the application, including bidding, commenting, and updating a watchlist, is handled through standard forms that are submitted and processed entirely on the backend before the page reloads with the updated result. A shared Bootstrap layout keeps the navigation bar and overall structure consistent across every page, and interactive elements such as the navigation bar rely on Bootstrap's built in JavaScript components. All of this data is stored in a SQLite database, so a listing's status, current highest bid, and comments stay accurate as users interact with it.
 
 <br>
 
