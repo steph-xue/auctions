@@ -1,4 +1,4 @@
-<h1 align="center">Auctions</h1>
+# Auctions
 
 A full stack online auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist.
 
