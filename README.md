@@ -1,150 +1,176 @@
-# Auctions Project
-The auctions project allows the user to view and create new auction listings, as well as bid for auctions in a web-based auction application. The user can login, logout, or register for a new user account for more functionality with the application.
-<br></br>
+<h1 align="center">Auctions</h1>
 
+A full stack online auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist.
 
-## Auctions App
-**Login**
-- Allows the user to login to their account
-&nbsp;
+<br>
 
-![Login](/auctions/static/auctions/images/login.png?raw=true "Login")
-<br></br>
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How It Works](#how-it-works)
+- [Getting Started](#getting-started)
+- [Future Improvements](#future-improvements)
 
-**Register for a New Account**
-- Allows the user to register for a new account
-&nbsp;
+<br>
 
-![Register](/auctions/static/auctions/images/register.png?raw=true "Register")
-<br></br>
+## Overview
 
-## Features where login authentication is not needed:
-**1. Viewing active auction listings (homepage)**  
-   - The user can view a list of all active auction listings (sorted alphabetically by title)
-     - This can be accessed via the 'Active Listings' tab 
-     - Each auction listing card on the homepage displays the following:
-       - Title
-        - Image
-        - Description
-        - The starting price
-        - The highest bidding price (and the user who made the bid)
-        - A 'more details' button to view more detailed information in the the auction listing page
-&nbsp;
+This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database.
 
-![Active Listings](/auctions/static/auctions/images/active_listings.png?raw=true "Active Listings")
-<br></br>
+<br>
 
-**2. Viewing more detailed information in the the auction listing page**
-   - The user can view more details about the selected auction listing item, add or delete items to their watchlist, add a bid greater than the starting price and last highest bid price, and leave or delete comments listed in reverse chronological order.
-    - This can be accessed by clicking into viewing 'More Details' about a particular listing item
-    - Information on the auction listing pages includes the following:
-      - Title
-        - Image
-        - Description
-        - Category
-        - Listing Owner
-        - The starting price
-        - The highest bidding price (and the user who made the bid)
-        - Comments made with regards to the listing item
-&nbsp;
-       
-![Listing Page](/auctions/static/auctions/images/listing_page.png?raw=true "Listing Page")
-<br></br>
+## Features
 
-**2. Searching auction listings by category**
-   - The user can search the list of active listings by category based on the listed categories available
-    - This can be accessed via the 'Categories' tab 
-    - Listings in each category are sorted alphabetically by title
-&nbsp;
+### Authentication
+Users can log in with an existing account or register for a new one. Browsing active listings is available to everyone, while creating listings, bidding, commenting, and using the watchlist all require an account.
 
-![View by Category](/auctions/static/auctions/images/view_category.png?raw=true "View by Category")
-<br></br>
+<p align="center"><b>Login</b></p>
+<p align="center"><img src="/auctions/static/auctions/images/login.png?raw=true" alt="Login" width="700"></p>
 
-## Features where login authentication is needed:
-**1. Creating new auction listings**
-   - Can be accessed via the 'Create Listing' tab 
-   - Users can create a new auction listing by providing the following information:
-      - Title
-        - Description
-        - Image URL (optional)
-        - Starting price
-        - Category
-      - The new auction listing will specify the user as the owner of the listing
-&nbsp;
+<p align="center"><b>Register</b></p>
+<p align="center"><img src="/auctions/static/auctions/images/register.png?raw=true" alt="Register" width="700"></p>
 
-![Create a New Listing](/auctions/static/auctions/images/create_listing.png?raw=true "Create a New Listing")
-<br></br>
+<br>
 
-**2. Using the watchlist**
-   - The watchlist can be used to help users keep track of listing items they are interested in
-   - Users can add/remove listing items to/from their own watchlist
-   - The function to add and remove watchlist items can be found on the auction's listing pages as a button:
-      - 'Add to Watchlist'
-         - 'Remove from Watchlist'
-      - Users can then view listing items in their own watchlist in the 'Watchlist' tab
-&nbsp;
+### Navigation
+A navigation bar gives users access to every part of the application. Active Listings and Categories are available to all visitors, while Create Listing, Watchlist, Bidding List, Auctions Won, and the user's own listings and username are only shown once a user is logged in.
 
-![Watchlist](/auctions/static/auctions/images/watchlist.png?raw=true "Watchlist")
-<br></br>
+<br>
 
-**3. Commenting on auction listings**
-   - Users can add and delete their own comments to an auction item's listing page
-   - Comments include:
-      - The comment being made
-        - The user who commented
-        - Date and time stamp
-      - The log of comments is displayed on the auction item's listing page in reverse chronological order
-<br></br>
+### Active Listings
+The homepage displays every active auction listing, sorted alphabetically by title, and can be reached at any time from the Active Listings tab. Each listing card shows its image, title, description, starting price, and current highest bid along with the bidder who made it, plus a "More Details" button that links through to the full listing page.
 
-**4. Bidding for auctions**
-   - Users can bid for their desired auction listing items
-   - The function to add a bid can be found on the auction's listing pages as an input and then clicking:
-      - 'Add Bid'
-      - The bid amount must be greater than the starting price and the current highest bidding price (if bids have been placed)
-      - The user can view their current highest bids in the 'Bidding List' tab
-        - Only the active listings where you currently hold the highest bids are listed
-      - Bidded items are also automatically added to the watchlist
-      - The user can aksee which auction listings they currently hold the highest bid for
-&nbsp;
+<p align="center"><img src="/auctions/static/auctions/images/active_listings.png?raw=true" alt="Active Listings" width="700"></p>
 
-![List of Your Highest Bids](/auctions/static/auctions/images/bidding_list.png?raw=true "List of Your Highest Bids")
-<br></br>
+<br>
 
-**5. Closing auctions and declaring a winner of the bid**
-   - Owners of a listing item can close the auction by clicking the red 'Close Listing' button at the bottom of the item's listing page
-   - Once the listing is closed, a winner is declared to be the highest bidder (if there is one)
-<br></br>
+### Listing Page
+Each listing has its own detail page showing the title, image, description, category, listing owner, starting price, and current highest bid along with the bidder who made it. From here, users can add a bid, add or remove the listing from their watchlist, and leave or delete comments.
 
-**6. Viewing auctions that you have won**
-   - The winner can see all auctions they have won in the 'Auction's Won' tab after the owner of the listing closes the bid and listing item page
-   - It will display all listings they have won with their name listed as the winner
-&nbsp;
+<p align="center"><img src="/auctions/static/auctions/images/listing_page.png?raw=true" alt="Listing Page" width="700"></p>
 
-![Auctions Won](/auctions/static/auctions/images/auctions_won.png?raw=true "Auctions Won")
-<br></br> 
+<br>
 
-**7. Viewing your own listings**
-   - The user can see which listings they currently own and select to view from all, active, or inactive listings
-&nbsp;
+### Comments
+Users can leave and delete their own comments on any listing's page. Each comment records the text of the comment, the user who made it, and the date and time it was posted, and the full log of comments is displayed on the listing page in reverse chronological order.
 
-![Your Listings](/auctions/static/auctions/images/your_listings.png?raw=true "Your Listings")
-<br></br> 
+<br>
 
-## Languages & Frameworks
-- The auctions project was created using Django, a Python-based web framework
-- JavaScript was utilized for the front end to create a mix of possible user interactions
+### Browse by Category
+Listings can be filtered by category from the Categories tab, with each category showing its listings sorted alphabetically by title. This makes it easy for users to find items in the type of auction they are interested in without scrolling through every active listing.
 
-## How to Run Locally
-- Install the latest version of python
-    - Check the version using the command
-        - ```python --version```
-- Clone the repository from github by typing in the command line
-    - HTTPS: ```git clone https://github.com/steph-xue/auctions.git```
-    - SSH: ```git clone git@github.com:steph-xue/auctions.git```
-- Install any dependencies by using the command
-    - ```pip install -r requirements.txt```
-- Apply database migrations by typing in the command line
-    - ```python3 manage.py makemigrations```
-    - ```python3 manage.py migrate```
-- The web application can be run on your local server by typing the command
-    - ```python3 manage.py runserver```
+<p align="center"><img src="/auctions/static/auctions/images/view_category.png?raw=true" alt="View by Category" width="700"></p>
+
+<br>
+
+### Create Listing
+Logged in users can create a new auction listing from the Create Listing tab by providing a title, description, starting price, category, and an optional image URL. The listing is saved with the current user as its owner and immediately appears among the active listings.
+
+<p align="center"><img src="/auctions/static/auctions/images/create_listing.png?raw=true" alt="Create a New Listing" width="700"></p>
+
+<br>
+
+### Watchlist
+Users can add or remove listings from a personal watchlist to keep track of items they are interested in, using the "Add to Watchlist" or "Remove from Watchlist" button on each listing's page. All watchlisted items can be reviewed together from the Watchlist tab.
+
+<p align="center"><img src="/auctions/static/auctions/images/watchlist.png?raw=true" alt="Watchlist" width="700"></p>
+
+<br>
+
+### Bidding
+Users can place a bid on any active listing by entering an amount and clicking "Add Bid," provided the amount is higher than both the starting price and the current highest bid, if one exists. Placing a bid automatically adds the listing to the user's watchlist, and the Bidding List tab shows every active listing where the user currently holds the highest bid.
+
+<p align="center"><img src="/auctions/static/auctions/images/bidding_list.png?raw=true" alt="List of Your Highest Bids" width="700"></p>
+
+<br>
+
+### Closing Listings and Winning Auctions
+The owner of a listing can close the auction at any time by clicking the "Close Listing" button at the bottom of the listing page. Once closed, a winner is declared as the highest bidder, if one exists, and the listing then appears in that winner's Auctions Won tab, where they can review every auction they have won.
+
+<p align="center"><img src="/auctions/static/auctions/images/auctions_won.png?raw=true" alt="Auctions Won" width="700"></p>
+
+<br>
+
+### Your Listings
+Users can view all the listings they own from a dedicated tab, and filter between all, active, or inactive listings to keep track of what they have created and their current status.
+
+<p align="center"><img src="/auctions/static/auctions/images/your_listings.png?raw=true" alt="Your Listings" width="700"></p>
+
+<br>
+
+## Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | JavaScript, HTML, CSS, Bootstrap |
+| Backend | Django, Python |
+| Database | SQLite |
+
+<br>
+
+## How It Works
+
+Every page extends a shared Bootstrap layout, keeping the navigation bar and overall structure consistent across the site. Interactive elements such as the navigation bar rely on Bootstrap's built in JavaScript components. The core functionality of the application, including bidding, commenting, and updating a watchlist, is handled by Django through standard forms that are submitted and processed entirely on the backend before the page reloads with the updated result. Listings, bids, comments, categories, and watchlist relationships are all stored as related records in a SQLite database through Django's models, with each listing referencing its current highest bid, category, and owner.
+
+<br>
+
+## Getting Started
+
+Follow the steps below to set up and run the application on your own machine.
+
+**Prerequisites**
+
+Make sure Python 3 is installed before you begin. You can check by running the command below, which should print a version number.
+```bash
+python --version
+```
+
+**1. Clone the repository**
+
+This downloads a copy of the project to your computer and moves you into the project folder.
+```bash
+git clone https://github.com/steph-xue/auctions.git
+cd auctions
+```
+
+**2. Create and activate a virtual environment (recommended)**
+
+This keeps the project's dependencies separate from other Python projects on your machine.
+```bash
+python3 -m venv venv
+source venv/bin/activate      # On Windows use: venv\Scripts\activate
+```
+
+**3. Install the dependencies**
+
+This installs Django and everything else the project needs to run.
+```bash
+pip install -r requirements.txt
+```
+
+**4. Set up the database**
+
+This creates the local database and the tables the application relies on.
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+**5. Start the development server**
+
+This runs the application locally.
+```bash
+python3 manage.py runserver
+```
+
+Once the server is running, open `http://127.0.0.1:8000/` in your browser to start using the application.
+
+<br>
+
+## Future Improvements
+Several enhancements are planned to extend the functionality of the application:
+- Automatic notifications when a user is outbid
+- Search functionality across listing titles and descriptions
+- Image uploads in addition to image URLs
+- A live hosted demo to allow users to try the application without a local setup
