@@ -1,6 +1,6 @@
 # Auctions
 
-A full stack online auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist.
+A full stack online auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
 
 <br>
 
@@ -33,27 +33,17 @@ Users can log in with an existing account or register for a new one. Browsing ac
 
 <br>
 
-### Navigation
-A navigation bar gives users access to every part of the application. Active Listings and Categories are available to all visitors, while Create Listing, Watchlist, Bidding List, Auctions Won, and the user's own listings and username are only shown once a user is logged in.
-
-<br>
-
 ### Active Listings
-The homepage displays every active auction listing, sorted alphabetically by title, and can be reached at any time from the Active Listings tab. Each listing card shows its image, title, description, starting price, and current highest bid along with the bidder who made it, plus a "More Details" button that links through to the full listing page.
+The homepage displays every active auction listing, sorted alphabetically by title, and can be reached at any time from the Active Listings tab. Each listing card shows its image, title, description, starting price, and current highest bid along with the bidder who made it, plus a "More Details" button that links through to the full listing page. A navigation bar gives users access to every part of the application, with Active Listings and Categories available to all visitors, while Create Listing, Watchlist, Bidding List, Auctions Won, and the user's own listings and username only appear once they are logged in.
 
 <p align="center"><img src="/auctions/static/auctions/images/active_listings.png?raw=true" alt="Active Listings" width="700"></p>
 
 <br>
 
 ### Listing Page
-Each listing has its own detail page showing the title, image, description, category, listing owner, starting price, and current highest bid along with the bidder who made it. From here, users can add a bid, add or remove the listing from their watchlist, and leave or delete comments.
+Each listing has its own detail page showing the title, image, description, category, listing owner, starting price, and current highest bid along with the bidder who made it. From here, users can add a bid, add or remove the listing from their watchlist, and leave or delete comments. Comments can be left and deleted by their own author, and each one records its text, the user who made it, and the date and time it was posted, with the full log displayed on the listing page in reverse chronological order.
 
 <p align="center"><img src="/auctions/static/auctions/images/listing_page.png?raw=true" alt="Listing Page" width="700"></p>
-
-<br>
-
-### Comments
-Users can leave and delete their own comments on any listing's page. Each comment records the text of the comment, the user who made it, and the date and time it was posted, and the full log of comments is displayed on the listing page in reverse chronological order.
 
 <br>
 
