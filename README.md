@@ -1,6 +1,6 @@
 # Auctions
 
-A full stack online auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
+A full stack auction web application where users can create and manage listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
 
 <br>
 
