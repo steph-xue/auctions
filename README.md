@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  A full stack marketplace web application where users can create and manage auction listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
+  A full-stack marketplace web application for creating auction listings, placing bids, browsing by category, and tracking items through a personal watchlist.
 </h4>
 
 <p align="center">
