@@ -1,6 +1,14 @@
-# Auctions
+<h1 align="center">
+  Auctions
+</h1>
 
-A full stack marketplace web application where users can create and manage auction listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
+<h4 align="center">
+  A full stack marketplace web application where users can create and manage auction listings, place competitive bids, browse listings by category, and track items of interest through a personal watchlist. Every listing page supports comments from other users, and closing an auction automatically declares the highest bidder the winner.
+</h4>
+
+<p align="center">
+  <img src="/auctions/static/auctions/images/active_listings.png?raw=true" alt="Active Listings" width="500">
+</p>
 
 <br>
 
@@ -16,7 +24,7 @@ A full stack marketplace web application where users can create and manage aucti
 
 ## Overview
 
-This project recreates the core experience of an online auction platform. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python, and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database. Each listing tracks its own current highest bid and owner, so bidding, closing an auction, and declaring a winner are all handled consistently as listings move from active to closed. Beyond the core buying and selling flow, the application also supports category browsing, a personal watchlist, and comment threads on every listing.
+This project recreates the core experience of an online auction platform, allowing users to create listings, place bids, leave comments, save items to a personal watchlist, and browse auctions by category. The frontend is built with JavaScript, HTML, CSS, and Bootstrap, presenting listings, bidding, and account information through a clean, responsive interface. The backend is built with Django and Python and handles user accounts, listings, categories, bids, comments, and watchlists, storing all of it in a SQLite database. Each listing tracks its current highest bid and owner, ensuring that bidding, closing an auction, and declaring a winner are handled consistently as listings move from active to closed.
 
 <br>
 
