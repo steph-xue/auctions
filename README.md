@@ -3,7 +3,8 @@
 </h1>
 
 <h4 align="center">
-  A full-stack marketplace web application for creating auction listings, placing bids, browsing by category, and tracking items through a personal watchlist.
+  A full-stack marketplace web application for creating auction listings, placing bids, <br>
+  browsing by category, and tracking items through a personal watchlist.
 </h4>
 
 <p align="center">
