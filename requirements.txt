@@ -1,4 +1,4 @@
-Django~=4.2.9
+Django~=4.2.30
 whitenoise
 django-environ
 gunicorn
