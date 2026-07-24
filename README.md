@@ -8,7 +8,7 @@
 </h4>
 
 <p align="center">
-  <img src="/assets/screenshots/active_listings.png?raw=true" alt="Active Listings" width="500">
+  <img src="/docs/screenshots/active_listings.png?raw=true" alt="Active Listings" width="500">
 </p>
 
 <br>
@@ -35,66 +35,66 @@ This project recreates the core experience of an online auction platform, allowi
 Users can log in with an existing account or register for a new one. Browsing active listings is available to everyone, while creating listings, bidding, commenting, and using the watchlist all require an account.
 
 <p align="center"><b>Login</b></p>
-<p align="center"><img src="/assets/screenshots/login.png?raw=true" alt="Login" width="700"></p>
+<p align="center"><img src="/docs/screenshots/login.png?raw=true" alt="Login" width="700"></p>
 
 <p align="center"><b>Register</b></p>
-<p align="center"><img src="/assets/screenshots/register.png?raw=true" alt="Register" width="700"></p>
+<p align="center"><img src="/docs/screenshots/register.png?raw=true" alt="Register" width="700"></p>
 
 <br>
 
 ### Active Listings
 The homepage displays every active auction listing, sorted alphabetically by title, and can be reached at any time from the Active Listings tab. Each listing card shows its image, title, description, starting price, and current highest bid along with the bidder who made it, plus a "More Details" button that links through to the full listing page. A navigation bar gives users access to every part of the application, with Active Listings and Categories available to all visitors, while Create Listing, Watchlist, Bidding List, Auctions Won, and the user's own listings and username only appear once they are logged in.
 
-<p align="center"><img src="/assets/screenshots/active_listings.png?raw=true" alt="Active Listings" width="700"></p>
+<p align="center"><img src="/docs/screenshots/active_listings.png?raw=true" alt="Active Listings" width="700"></p>
 
 <br>
 
 ### Listing Page
 Each listing has its own detail page showing the title, image, description, category, listing owner, starting price, and current highest bid along with the bidder who made it. From here, users can add a bid, add or remove the listing from their watchlist, and leave or delete comments. Comments can be left and deleted by their own author, and each one records its text, the user who made it, and the date and time it was posted, with the full log displayed on the listing page in reverse chronological order.
 
-<p align="center"><img src="/assets/screenshots/listing_page.png?raw=true" alt="Listing Page" width="700"></p>
+<p align="center"><img src="/docs/screenshots/listing_page.png?raw=true" alt="Listing Page" width="700"></p>
 
 <br>
 
 ### Browse by Category
 Listings can be filtered by category from the Categories tab, with each category showing its listings sorted alphabetically by title. This makes it easy for users to find items in the type of auction they are interested in without scrolling through every active listing.
 
-<p align="center"><img src="/assets/screenshots/view_category.png?raw=true" alt="View by Category" width="700"></p>
+<p align="center"><img src="/docs/screenshots/view_category.png?raw=true" alt="View by Category" width="700"></p>
 
 <br>
 
 ### Create Listing
 Logged in users can create a new auction listing from the Create Listing tab by providing a title, description, starting price, category, and an optional image URL. The listing is saved with the current user as its owner and immediately appears among the active listings.
 
-<p align="center"><img src="/assets/screenshots/create_listing.png?raw=true" alt="Create a New Listing" width="700"></p>
+<p align="center"><img src="/docs/screenshots/create_listing.png?raw=true" alt="Create a New Listing" width="700"></p>
 
 <br>
 
 ### Watchlist
 Users can add or remove listings from a personal watchlist to keep track of items they are interested in, using the "Add to Watchlist" or "Remove from Watchlist" button on each listing's page. All watchlisted items can be reviewed together from the Watchlist tab.
 
-<p align="center"><img src="/assets/screenshots/watchlist.png?raw=true" alt="Watchlist" width="700"></p>
+<p align="center"><img src="/docs/screenshots/watchlist.png?raw=true" alt="Watchlist" width="700"></p>
 
 <br>
 
 ### Bidding
 Users can place a bid on any active listing by entering an amount and clicking "Add Bid," provided the amount is higher than both the starting price and the current highest bid, if one exists. Placing a bid automatically adds the listing to the user's watchlist, and the Bidding List tab shows every active listing where the user currently holds the highest bid.
 
-<p align="center"><img src="/assets/screenshots/bidding_list.png?raw=true" alt="List of Your Highest Bids" width="700"></p>
+<p align="center"><img src="/docs/screenshots/bidding_list.png?raw=true" alt="List of Your Highest Bids" width="700"></p>
 
 <br>
 
 ### Closing Listings and Winning Auctions
 The owner of a listing can close the auction at any time by clicking the "Close Listing" button at the bottom of the listing page. Once closed, a winner is declared as the highest bidder, if one exists, and the listing then appears in that winner's Auctions Won tab, where they can review every auction they have won.
 
-<p align="center"><img src="/assets/screenshots/auctions_won.png?raw=true" alt="Auctions Won" width="700"></p>
+<p align="center"><img src="/docs/screenshots/auctions_won.png?raw=true" alt="Auctions Won" width="700"></p>
 
 <br>
 
 ### Your Listings
 Users can view all the listings they own from a dedicated tab, and filter between all, active, or inactive listings to keep track of what they have created and their current status.
 
-<p align="center"><img src="/assets/screenshots/your_listings.png?raw=true" alt="Your Listings" width="700"></p>
+<p align="center"><img src="/docs/screenshots/your_listings.png?raw=true" alt="Your Listings" width="700"></p>
 
 <br>
 
