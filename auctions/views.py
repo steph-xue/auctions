@@ -101,7 +101,7 @@ def listing(request, id):
     # Determines if the current user has the listing in their watchlist
     in_watchlist = current_user in listing_data.watchlist.all()
 
-    # Gets all comments for the listing item (sorted in reverse chronological order by date/time)
+    # Gets all comments for the listing item (sorted in reverse chronological order by date and time)
     listing_comments = Comment.objects.filter(listing_item=listing_data)
     sorted_listing_comments = sorted(listing_comments, key=lambda comment: comment.date_time)
 
@@ -116,11 +116,11 @@ def listing(request, id):
 # Allows the user to select from different categories to view
 def category(request):
 
-    # Gets all categories avaliable (sorted in alphabetical order by category name)
+    # Gets all categories available (sorted in alphabetical order by category name)
     all_categories = Category.objects.all()
     sorted_all_categories = sorted(all_categories, key=lambda category: category.category_name)
 
-    # Shows user page to select from all categories avaliable
+    # Shows user page to select from all categories available
     return render(request, "auctions/category.html",
         {
             "categories": sorted_all_categories
@@ -130,7 +130,7 @@ def category(request):
 # Allows the user to submit a chosen category and view corresponding listings
 def category_listing(request):
 
-    # Gets all categories avaliable (sorted in alphabetical order by category name)
+    # Gets all categories available (sorted in alphabetical order by category name)
     all_categories = Category.objects.all()
     sorted_all_categories = sorted(all_categories, key=lambda category: category.category_name)
 
@@ -142,7 +142,7 @@ def category_listing(request):
             "message_red_alert": "Please select a valid category"
         })
     
-    # Retrieves the category selected 
+    # Retrieves the category selected
     category = request.POST.get("category", None)
     category_data = Category.objects.get(category_name=category)
 
@@ -150,11 +150,11 @@ def category_listing(request):
     other_category_data = Category.objects.exclude(category_name=category)
     sorted_other_category_data = sorted(other_category_data, key=lambda category: category.category_name)
 
-    # Gets all listings within the choosen category (sorted in alphabetical order by title)
+    # Gets all listings within the chosen category (sorted in alphabetical order by title)
     active_listings = Listing.objects.filter(category=category_data, is_active=True)
     sorted_active_listings = sorted(active_listings, key=lambda listing: listing.title)
 
-    # Redirects user to view listings in the chose category
+    # Redirects user to view listings in the chosen category
     return render(request, "auctions/category_listing.html",
     {
         "categories": sorted_other_category_data,
@@ -167,7 +167,7 @@ def category_listing(request):
 @login_required(login_url='login')
 def create(request):
 
-    # Gets all categories avaliable (sorted in alphabetical order by category name)
+    # Gets all categories available (sorted in alphabetical order by category name)
     all_categories = Category.objects.all()
     sorted_all_categories = sorted(all_categories, key=lambda category: category.category_name)
 
@@ -229,7 +229,7 @@ def create(request):
 @login_required(login_url='login')
 def your_listings(request):
 
-    # POST - Allows the user to select from viewing all, only active, or only inactive listings owned by the user
+    # POST - allows the user to select from viewing all, only active, or only inactive listings owned by the user
     if request.method == "POST":
 
         # Gets the listing type selected by the user (all, active, or inactive)
@@ -246,7 +246,7 @@ def your_listings(request):
         # Sort the user's own listings (in alphabetical order by title)
         sorted_owner_listings = sorted(owner_listings, key=lambda listing: listing.title)
 
-        # Displays the user's own listings 
+        # Displays the user's own listings
         return render(request, "auctions/your_listings.html",
         {
             "listings": sorted_owner_listings,
@@ -261,7 +261,7 @@ def your_listings(request):
         owner_listings = current_user.listing_user.all()
         sorted_owner_listings = sorted(owner_listings, key=lambda listing: listing.title)
 
-        # Displays the user's listings 
+        # Displays the user's listings
         return render(request, "auctions/your_listings.html",
         {
             "listings": sorted_owner_listings
@@ -277,7 +277,7 @@ def watchlist(request):
      watchlist_data = current_user.user_watchlist.filter(is_active=True)
      sorted_watchlist_data = sorted(watchlist_data, key=lambda listing: listing.title)
 
-    # Displays the user's watchlist 
+    # Displays the user's watchlist
      return render(request, "auctions/watchlist.html",
     {
         "listings": sorted_watchlist_data
@@ -295,7 +295,7 @@ def add_watchlist(request, id):
     # Add current user to the watchlist database of the listed item
     listing_data.watchlist.add(current_user)
 
-    # Gets all comments for the listing item (sorted in reverse chronological order by date/time)
+    # Gets all comments for the listing item (sorted in reverse chronological order by date and time)
     listing_comments = Comment.objects.filter(listing_item=listing_data)
     sorted_listing_comments = sorted(listing_comments, key=lambda comment: comment.date_time)
 
@@ -317,10 +317,10 @@ def remove_watchlist(request, id):
     listing_data = Listing.objects.get(pk=id)
     current_user = request.user
 
-    # Remove current user to the watchlist database of the listed item
+    # Remove current user from the watchlist database of the listed item
     listing_data.watchlist.remove(current_user)
     
-    # Gets all comments for the listing item (sorted in reverse chronological order by date/time)
+    # Gets all comments for the listing item (sorted in reverse chronological order by date and time)
     listing_comments = Comment.objects.filter(listing_item=listing_data)
     sorted_listing_comments = sorted(listing_comments, key=lambda comment: comment.date_time)
 
@@ -345,7 +345,7 @@ def add_comment(request, id):
     # Determines if the current user has the listing in their watchlist
     in_watchlist = current_user in listing_data.watchlist.all()
 
-    # Gets all comments for the listing item (sorted in reverse chronological order by date/time)
+    # Gets all comments for the listing item (sorted in reverse chronological order by date and time)
     listing_comments = Comment.objects.filter(listing_item=listing_data)
     sorted_listing_comments = sorted(listing_comments, key=lambda comment: comment.date_time)
 
@@ -399,11 +399,11 @@ def delete_comment(request, id):
 @login_required(login_url='login')
 def bidlist(request):
      
-    # Gets all bids that the current user's holds the highest bid for
+    # Gets all bids that the current user holds the highest bid for
     current_user = request.user
     bidlist_data = current_user.bid_user.all()
 
-    # Create a new list to store all bid listings 
+    # Create a new list to store all bid listings
     bid_list = []
 
     # Iterates through all highest bids the user holds and appends the associated listings to the bid_list
@@ -411,7 +411,7 @@ def bidlist(request):
          listing = Listing.objects.get(current_highest_bid=bid)
          bid_list.append(listing)
     
-    # Sort the highest biding list (in alphabetical order by title of listing)
+    # Sort the highest bidding list (in alphabetical order by title of listing)
     sorted_bid_list = sorted(bid_list, key=lambda listing: listing.title)
 
     # Displays the user's highest bidding list
@@ -421,7 +421,7 @@ def bidlist(request):
     })
 
 
-# Allows the user to add bid for a listing
+# Allows the user to add a bid for a listing
 @login_required(login_url='login')
 def add_bid(request, id):
 
@@ -432,7 +432,7 @@ def add_bid(request, id):
     # Determines if the current user has the listing in their watchlist
     in_watchlist = current_user in listing_data.watchlist.all()
 
-    # Gets all comments for the listing item (sorted in reverse chronological order by date/time)
+    # Gets all comments for the listing item (sorted in reverse chronological order by date and time)
     listing_comments = Comment.objects.filter(listing_item=listing_data)
     sorted_listing_comments = sorted(listing_comments, key=lambda comment: comment.date_time)
 

@@ -1,17 +1,16 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-
-# Django
-db.sqlite3
-static/
-media/
-
-# Env
-.env
-.venv/
-venv/
-
 # macOS
 .DS_Store
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Python virtual environment
+venv/
+.venv/
+
+# Django database
+db.sqlite3
+
+# Django generated static files
+/static/

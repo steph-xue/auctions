@@ -1,4 +1,4 @@
-Django~=5.2.16
-whitenoise
-django-environ
-gunicorn
+Django==5.2.16
+whitenoise==6.12.0
+django-environ==0.14.0
+gunicorn==26.0.0

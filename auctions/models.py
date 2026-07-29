@@ -11,21 +11,23 @@ class User(AbstractUser):
 class Category(models.Model):
     category_name = models.CharField(max_length=30)
 
+    # Returns the category name as its string representation
     def __str__(self):
         return self.category_name
-    
+
 
 # Model for highest bids database (highest bid price for a listing, user who made the highest bid for a listing)
 class Bid(models.Model):
     highest_bid = models.FloatField(default=None)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name="bid_user")
 
+    # Returns the bid amount and the user who made it as its string representation
     def __str__(self):
         return f"${self.highest_bid:.2f} bid made by {self.user}"
 
 
 # Model for auction listings database (each listing includes a title, description, image url, initial price, current highest bid
-# category, is active/inactive in the listings, in which users' watchlists, owner of the posting)
+# category, is active or inactive in the listings, in which users' watchlists, owner of the posting)
 class Listing(models.Model):
     title = models.CharField(max_length=30)
     description = models.CharField(max_length=300)
@@ -38,10 +40,11 @@ class Listing(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name="listing_user")
     winner = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name="listing_winner", default=None)
 
+    # Returns the listing title as its string representation
     def __str__(self):
         return self.title
-    
-    
+
+
 # Model for comment database (comment, date and time, listing item, and user who made the comment)
 class Comment(models.Model):
     text = models.CharField(max_length=300)
@@ -49,9 +52,6 @@ class Comment(models.Model):
     listing_item = models.ForeignKey(Listing, on_delete=models.CASCADE, blank=True, null=True, related_name="comment_listing")
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name="comment_user")
 
+    # Returns the comment text and its author and listing as its string representation
     def __str__(self):
         return f"{self.text} commented by {self.user} on {self.listing_item}"
-    
-
-
-
