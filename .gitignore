@@ -1,15 +1,15 @@
-# Editor/OS files
-.DS_Store
+# Virtual environments
+.venv/
 
-# Python bytecode
+# Database files
+db.sqlite3
+
+# Build and generated files
+/static/
+
+# Python cache files
 __pycache__/
 *.pyc
 
-# Python virtual environment
-.venv/
-
-# Django database
-db.sqlite3
-
-# Django generated static files
-/static/
+# Operating system files
+.DS_Store
